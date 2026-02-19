@@ -1,0 +1,42 @@
+.generate-button,
+.hacker-button {
+  position: relative; /* <-- add this */
+  background-color: #6a6ec3;
+  color: black;
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+  border: none;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.generate-button:hover {
+  background-color: #4d53c4;
+}
+
+.hacker-button {
+  background-color: black;
+  color: #6a6ec3;
+}
+
+.hacker-button:hover {
+  background-color: #111;
+}
+
+/* === Light mode button overrides === */
+.light-mode .generate-button {
+  background-color: #6ab87a;
+  color: #14532d;
+}
+.light-mode .generate-button:hover {
+  background-color: #4da863;
+}
+.light-mode .hacker-button {
+  background-color: #f0fdf4;
+  color: #16a34a;
+  border: 1px solid #bbf7d0;
+}
+.light-mode .hacker-button:hover {
+  background-color: #dcfce7;
+}

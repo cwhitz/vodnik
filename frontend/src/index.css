@@ -1,0 +1,185 @@
+@import "tailwindcss";
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: none;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+button:focus,
+button:focus-visible {
+  outline: none;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+}
+
+/* ---- CodeMirror base ---- */
+.cm-editor {
+  height: 100%;
+  font-size: 0.9375rem;
+  line-height: 1.7;
+}
+.cm-editor.cm-focused {
+  outline: none;
+}
+.cm-scroller {
+  overflow: auto;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+.cm-content {
+  font-family: 'Inter', system-ui, sans-serif;
+  padding: 1rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+  color: rgb(229 229 229);
+}
+.cm-line {
+  padding: 0;
+}
+.cm-cursor,
+.cm-cursor-primary {
+  border-left: 1.5px solid white !important;
+}
+.cm-selectionBackground {
+  background: rgba(106, 110, 195, 0.3) !important;
+}
+.cm-focused .cm-selectionBackground {
+  background: rgba(106, 110, 195, 0.45) !important;
+}
+.cm-placeholder {
+  color: rgb(115 115 115);
+  font-style: italic;
+}
+
+/* ---- Media tag badges ---- */
+.cm-media-tag-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 0.68rem;
+  font-family: ui-monospace, monospace;
+  font-weight: 600;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  cursor: default;
+  line-height: 1.5;
+}
+.cm-media-tag-open {
+  background: rgba(106, 110, 195, 0.85);
+  color: white;
+  border: 1px solid rgba(106, 110, 195, 1);
+  margin-right: 2px;
+}
+.cm-media-tag-close {
+  background: rgba(106, 110, 195, 0.2);
+  color: rgba(180, 182, 230, 0.7);
+  border: 1px solid rgba(106, 110, 195, 0.35);
+  font-size: 0.62rem;
+  margin-left: 2px;
+}
+
+/* ---- Highlighted content between tags ---- */
+.cm-media-content {
+  background-color: rgba(106, 110, 195, 0.22);
+  border-radius: 2px;
+}
+
+/* ===== Light Mode ===== */
+
+/* CodeMirror */
+.light-mode .cm-content { color: #1a2320; }
+.light-mode .cm-cursor,
+.light-mode .cm-cursor-primary { border-left-color: #1a2320 !important; }
+.light-mode .cm-selectionBackground { background: rgba(74, 222, 128, 0.25) !important; }
+.light-mode .cm-focused .cm-selectionBackground { background: rgba(74, 222, 128, 0.35) !important; }
+.light-mode .cm-placeholder { color: #9ca3af; }
+.light-mode .cm-media-tag-close { color: rgba(45, 122, 69, 0.75); }
+
+/* Neutral backgrounds */
+.light-mode .bg-neutral-900 { background-color: #ffffff !important; }
+.light-mode .bg-neutral-800 { background-color: #f1f5f1 !important; }
+.light-mode .bg-neutral-700 { background-color: #e5e7eb !important; }
+
+/* Divider lines */
+.light-mode .h-px.bg-neutral-700 { background-color: #e5e7eb !important; }
+
+/* Neutral text */
+.light-mode .text-neutral-100 { color: #111827 !important; }
+.light-mode .text-neutral-200 { color: #1f2937 !important; }
+.light-mode .text-neutral-300 { color: #374151 !important; }
+.light-mode .text-neutral-400 { color: #6b7280 !important; }
+.light-mode .text-neutral-500 { color: #9ca3af !important; }
+.light-mode .text-neutral-600 { color: #d1d5db !important; }
+
+/* Neutral borders */
+.light-mode .border-neutral-700 { border-color: #d1d5db !important; }
+.light-mode .border-neutral-800 { border-color: #e5e7eb !important; }
+
+/* Accent border (rename input) */
+.light-mode .border-\[\#6a6ec3\] { border-color: #4ade80 !important; }
+
+/* Focus states */
+.light-mode .focus\:border-\[\#6a6ec3\]:focus { border-color: #4ade80 !important; }
+.light-mode .focus\:border-neutral-500:focus { border-color: #4ade80 !important; }
+
+/* Textarea */
+.light-mode textarea {
+  background-color: #f1f5f1 !important;
+  color: #1f2937 !important;
+  border-color: #d1d5db !important;
+}
+
+/* Range slider accent */
+.light-mode input[type="range"] { accent-color: #4ade80; }
